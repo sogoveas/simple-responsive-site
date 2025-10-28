@@ -1,0 +1,58 @@
+body { 
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: antiquewhite;
+    text-align: center;
+    font-family: 'elementary';
+}
+
+.images {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    justify-items: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.images img {
+    width: 100%;
+    max-width: 400px; 
+    height: auto;
+    border-radius: 8px;
+}
+
+@media only screen and (min-width: 600px) {
+	body {
+		margin: auto;
+        background-color: black;
+		width: 100%;
+	}
+	
+	.images {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1rem;
+		padding: 2rem;
+	}
+
+    .images img {
+        width: 100%;
+        max-width: none;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+    }
+
+    .images img:hover {
+        transform: scale(1.05);
+    }
+}
+
+@font-face {
+    font-family: 'elementary';
+    src: url(fonts/Elementary_Gothic_Bookhand.ttf);
+}
